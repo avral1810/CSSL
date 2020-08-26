@@ -1,0 +1,115 @@
+(venv) aviral:NTAP-master aviral$ python3 test_rnn.py --data gab3_cleaned_binary.csv --task hate
+Loaded file with 6997 documents
+Removed 769 docs after cleaning that didn't have enough valid tokens
+Encoded 6228 docs
+0 tokens lost to truncation
+96.136% tokens covered by vocabulary of size 10002
+Found 9461/10002 of vocab in glove.6B.300d.txt
+WARNING: Logging before flag parsing goes to stderr.
+W0825 22:17:13.088236 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:103: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+W0825 22:17:13.088431 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:104: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W0825 22:17:13.149626 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:111: dropout (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dropout instead.
+W0825 22:17:13.200813 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:174: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+W0825 22:17:13.201056 4406820288 rnn_cell_impl.py:893] <tensorflow.python.ops.rnn_cell_impl.LSTMCell object at 0x12ab9af60>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+W0825 22:17:13.201338 4406820288 rnn_cell_impl.py:893] <tensorflow.python.ops.rnn_cell_impl.LSTMCell object at 0x12abe82e8>: Using a concatenated state is slower and will soon be deprecated.  Use state_is_tuple=True.
+W0825 22:17:13.201442 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:193: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+W0825 22:17:13.201669 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/venv/lib/python3.7/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+W0825 22:17:13.271349 4406820288 deprecation.py:506] From /Users/aviral/Desktop/Student Worker/NTAP-master/venv/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+W0825 22:17:13.277575 4406820288 deprecation.py:506] From /Users/aviral/Desktop/Student Worker/NTAP-master/venv/lib/python3.7/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+W0825 22:17:13.765157 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/venv/lib/python3.7/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0825 22:17:13.873689 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:132: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0825 22:17:14.068821 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:135: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+W0825 22:17:14.141626 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:148: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+W0825 22:17:14.598159 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/RNN.py:158: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+Conducting Fold # 1
+W0825 22:17:14.602915 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/models.py:225: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+W0825 22:17:14.626388 4406820288 deprecation_wrapper.py:119] From /Users/aviral/Desktop/Student Worker/NTAP-master/ntap/models.py:226: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Epoch 0: Loss = 0.236, Train Accuracy = 0.416, Test Accuracy = 0.595
+Epoch 1: Loss = 0.212, Train Accuracy = 0.654, Test Accuracy = 0.722
+Epoch 2: Loss = 0.204, Train Accuracy = 0.644, Test Accuracy = 0.736
+Epoch 3: Loss = 0.194, Train Accuracy = 0.687, Test Accuracy = 0.762
+Epoch 4: Loss = 0.186, Train Accuracy = 0.703, Test Accuracy = 0.785
+Epoch 5: Loss = 0.179, Train Accuracy = 0.722, Test Accuracy = 0.797
+Epoch 6: Loss = 0.174, Train Accuracy = 0.736, Test Accuracy = 0.811
+Epoch 7: Loss = 0.17, Train Accuracy = 0.746, Test Accuracy = 0.809
+Epoch 8: Loss = 0.166, Train Accuracy = 0.756, Test Accuracy = 0.805
+Epoch 9: Loss = 0.162, Train Accuracy = 0.767, Test Accuracy = 0.797
+W0825 22:18:42.306441 4406820288 deprecation.py:323] From /Users/aviral/Desktop/Student Worker/NTAP-master/venv/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Conducting Fold # 2
+Epoch 0: Loss = 0.239, Train Accuracy = 0.401, Test Accuracy = 0.622
+Epoch 1: Loss = 0.214, Train Accuracy = 0.638, Test Accuracy = 0.696
+Epoch 2: Loss = 0.203, Train Accuracy = 0.638, Test Accuracy = 0.74
+Epoch 3: Loss = 0.194, Train Accuracy = 0.682, Test Accuracy = 0.756
+Epoch 4: Loss = 0.185, Train Accuracy = 0.7, Test Accuracy = 0.781
+Epoch 5: Loss = 0.179, Train Accuracy = 0.717, Test Accuracy = 0.797
+Epoch 6: Loss = 0.175, Train Accuracy = 0.733, Test Accuracy = 0.806
+Epoch 7: Loss = 0.171, Train Accuracy = 0.742, Test Accuracy = 0.803
+Epoch 8: Loss = 0.167, Train Accuracy = 0.749, Test Accuracy = 0.806
+Epoch 9: Loss = 0.163, Train Accuracy = 0.759, Test Accuracy = 0.81
+Conducting Fold # 3
+Epoch 0: Loss = 0.222, Train Accuracy = 0.432, Test Accuracy = 0.773
+Epoch 1: Loss = 0.221, Train Accuracy = 0.595, Test Accuracy = 0.609
+Epoch 2: Loss = 0.201, Train Accuracy = 0.638, Test Accuracy = 0.747
+Epoch 3: Loss = 0.197, Train Accuracy = 0.677, Test Accuracy = 0.745
+Epoch 4: Loss = 0.188, Train Accuracy = 0.7, Test Accuracy = 0.776
+Epoch 5: Loss = 0.182, Train Accuracy = 0.713, Test Accuracy = 0.789
+Epoch 6: Loss = 0.178, Train Accuracy = 0.726, Test Accuracy = 0.793
+Epoch 7: Loss = 0.174, Train Accuracy = 0.737, Test Accuracy = 0.803
+Epoch 8: Loss = 0.171, Train Accuracy = 0.745, Test Accuracy = 0.805
+Epoch 9: Loss = 0.167, Train Accuracy = 0.753, Test Accuracy = 0.807
+Conducting Fold # 4
+Epoch 0: Loss = 0.224, Train Accuracy = 0.458, Test Accuracy = 0.784
+Epoch 1: Loss = 0.222, Train Accuracy = 0.573, Test Accuracy = 0.658
+Epoch 2: Loss = 0.198, Train Accuracy = 0.675, Test Accuracy = 0.762
+Epoch 3: Loss = 0.194, Train Accuracy = 0.682, Test Accuracy = 0.755
+Epoch 4: Loss = 0.185, Train Accuracy = 0.714, Test Accuracy = 0.768
+Epoch 5: Loss = 0.178, Train Accuracy = 0.721, Test Accuracy = 0.786
+Epoch 6: Loss = 0.174, Train Accuracy = 0.732, Test Accuracy = 0.805
+Epoch 7: Loss = 0.17, Train Accuracy = 0.742, Test Accuracy = 0.809
+Epoch 8: Loss = 0.166, Train Accuracy = 0.749, Test Accuracy = 0.809
+Epoch 9: Loss = 0.162, Train Accuracy = 0.759, Test Accuracy = 0.809
+Conducting Fold # 5
+Epoch 0: Loss = 0.233, Train Accuracy = 0.425, Test Accuracy = 0.668
+Epoch 1: Loss = 0.212, Train Accuracy = 0.656, Test Accuracy = 0.74
+Epoch 2: Loss = 0.204, Train Accuracy = 0.645, Test Accuracy = 0.762
+Epoch 3: Loss = 0.196, Train Accuracy = 0.681, Test Accuracy = 0.767
+Epoch 4: Loss = 0.188, Train Accuracy = 0.703, Test Accuracy = 0.782
+Epoch 5: Loss = 0.183, Train Accuracy = 0.716, Test Accuracy = 0.798
+Epoch 6: Loss = 0.178, Train Accuracy = 0.726, Test Accuracy = 0.804
+Epoch 7: Loss = 0.174, Train Accuracy = 0.737, Test Accuracy = 0.814
+Epoch 8: Loss = 0.17, Train Accuracy = 0.747, Test Accuracy = 0.807
+Epoch 9: Loss = 0.167, Train Accuracy = 0.751, Test Accuracy = 0.807
+            f1  accuracy  precision    recall     kappa
+hate                                                   
+0     0.539162  0.796950   0.505119  0.578125  0.409709
+1     0.552632  0.808989   0.532609  0.574219  0.431421
+2     0.585198  0.806581   0.523077  0.664062  0.461396
+3     0.554935  0.808032   0.530249  0.582031  0.432897
+4     0.568345  0.807229   0.526667  0.617188  0.445249
+Mean  0.560054  0.805556   0.523544  0.603125  0.436134
+Std   0.017455  0.004894   0.010915  0.038133  0.019054

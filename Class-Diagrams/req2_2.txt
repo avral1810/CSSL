@@ -1,0 +1,12 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(venv) aviral:NTAP-master aviral$ python3 test_svm.py --glove glove.6B.300d.txt --input gab3_cleaned_binary.csv
+Loaded file with 6997 documents
+WARNING: Logging before flag parsing goes to stderr.
+W0825 22:49:24.071146 4557786560 utils.py:45] all zero row in document-term matrix found
+W0825 22:49:24.071568 4557786560 utils.py:47] all zero column in document-term matrix found
+TARGET: hate
+Saved results (hate_lda_cvres.csv) to /Users/aviral/Desktop/Student Worker/NTAP-master
+(venv) aviral:NTAP-master aviral$ 

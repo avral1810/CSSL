@@ -1,0 +1,32 @@
+Task 1:
+	All the class diagrams are in the pdf document class_diagrams.pdf 
+		a. Class Diagram for RNN
+		b. Class Diagram for SVM
+		c. Class Diagram for NTAP
+
+Task 2:
+	2.1 Training for 5 folds, a bi directional LSTM Model with a hidden cell size of 128 on gab3_cleaned_binary dataset
+
+		changed line 16 in test_rnn.py for number of fold
+		result = model.CV(data, num_epochs=10, num_folds=5)
+		change line 25, 26, 27, 28 in test_rnn.py for number of hidden cells and bi-directional LSTM
+
+		model = RNN("hate ~ seq(text)",
+                    rnn_dropout=0.2, hidden_size=128, cell="biLSTM",
+                    embedding_source="glove", data=data, optimizer='adam',
+                    learning_rate=0.0001)
+        Output is attached as a seperate text file and an image file named req2_1.txt and req2_1.png respectively
+    
+    2.2 Training a SVM model on gab3_cleaned_binary dataset
+    	For SVM Model: python3 test_svm.py --input <path to the gab3_cleaned_binary.csv> --glove <path to the glove file>
+    	changed line 105 to targets = ["hate"] to test the model on hate
+    	changed line 42 to formula = target+" ~ "+feature+"(text)"
+    	Output is attached as a seperate text file and an image file named req2_2.txt and req2_2.png respectively and hate_lda_cvres.csv
+Task 3: 
+	In CNN.pdf
+
+Task 4. 
+	In CNN.pdf and in class-diagrams/
+
+
+Deleted the glove file as it was too large.
